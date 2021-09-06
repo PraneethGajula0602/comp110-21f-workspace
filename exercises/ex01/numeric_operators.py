@@ -1,4 +1,6 @@
-"""This is a program to demonstrate common python operators"""
+"""This is a program to demonstrate common python operators!"""
+
+__author__ = "730394749"
 
 LHS: str = input("Left-hand side: ")
 RHS: str = input("Right-hand side: ")

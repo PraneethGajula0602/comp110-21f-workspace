@@ -1,4 +1,6 @@
-"""This is a program you can use to order two given numbers"""
+"""This is a program you can use to order two given numbers!"""
+
+__author__ = "730394749"
 
 LHS: str = input("Left-hand side: ")
 RHS: str = input("Right-hand side: ")

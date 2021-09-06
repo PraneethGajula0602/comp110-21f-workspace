@@ -1,4 +1,4 @@
-"""This is a program to help you feel better"""
+"""This is a program to help you feel better!"""
 
 __author__ = "730394749"
 
