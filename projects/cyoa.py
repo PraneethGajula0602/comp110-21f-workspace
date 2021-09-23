@@ -1,15 +1,14 @@
 """Hope you survive!"""
 __author__ = "730394749"
-
 from random import randint
+CHANCE_OF_DYING: int = 2
 
 points: int = int()
 player: str = str("")
 
-CHANCE_OF_DYING: int = 2
-
 
 def main() -> None:
+    """Main function."""
     greet()
     play_again: bool = True
     while(play_again):
