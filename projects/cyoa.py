@@ -1,3 +1,6 @@
+"""Hope you survive!"""
+__author__ = "730394749"
+
 from random import randint
 
 points: int = int()
@@ -22,13 +25,16 @@ def main():
     return None
 
 
-def greet():
+def greet() -> None:
+    """Greet the player"""
+    print("Welcome to my game! I hope you survive!")
     global player
     player = input("Enter your name: ")
     return None
 
 
-def enter_experience():
+def enter_experience() -> None:
+    """Start the game"""
     print("You've angered some very rich people. They will either set loose lions to kill you, or use a bomb to blow you up. You only have a moment - you see pliers and a gun next to you. Which do you pick?")
     entered: str = str(input("Type 'G' for the gun, 'P' for the pliers, or 'E' to exit the game. "))
     while(input_is_bad(entered, "G", "g", "P", "p")):
@@ -43,10 +49,12 @@ def enter_experience():
 
 
 def input_is_bad(entered: str, option_one: str, option_two: str, option_three: str, option_four: str) -> bool:
+    """Make sure player gives valid inputs"""
     return entered != option_one and entered != option_two and entered != option_three and entered != option_four and entered != "E" and entered != "e"
 
 
-def experience_gun():
+def experience_gun() -> None:
+    """Player chooses gun"""
     print(player + " grabs the gun. It only has one bullet!")
     is_lion: bool = (randint(1, CHANCE_OF_DYING) == 1)
     if(is_lion):
@@ -66,7 +74,8 @@ def experience_gun():
     return None
 
 
-def experience_sword():
+def experience_sword() -> None:
+    """Player chooses sword"""
     print(player + " grabs the sword. Let's hope this works! ")
     is_goons: bool = (randint(1, CHANCE_OF_DYING) == 1)
     if(is_goons):
@@ -80,7 +89,8 @@ def experience_sword():
     return None
 
 
-def experience_money():
+def experience_money() -> None:
+    """Player chooses money"""
     print(player + " grabs the money. Let's hope this works! ")
     is_tax: bool = (randint(1, CHANCE_OF_DYING) == 1)
     if(is_tax):
@@ -94,7 +104,8 @@ def experience_money():
     return None
 
 
-def experience_pliers():
+def experience_pliers() -> None:
+    """Player chooses pliers"""
     print(player + " grabs the pliers. Let's hope this works! ")
     is_bomb: bool = (randint(1, CHANCE_OF_DYING) == 1)
     if(is_bomb):
@@ -114,7 +125,8 @@ def experience_pliers():
     return None
 
 
-def experience_lawyer():
+def experience_lawyer() -> None:
+    """Player chooses lawyer"""
     print(player + " tells the lawyer that political science is a real science. He is now on your side! ")
     is_lawsuit: bool = (randint(1, CHANCE_OF_DYING) == 1)
     if(is_lawsuit):
@@ -128,7 +140,8 @@ def experience_lawyer():
     return None
 
 
-def experience_mask():
+def experience_mask() -> None:
+    """Player chooses mask"""
     print(player + " grabs the mask. Let's hope this works! ")
     is_gas: bool = (randint(1, CHANCE_OF_DYING) == 1)
     if(is_gas):
