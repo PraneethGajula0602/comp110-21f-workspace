@@ -9,6 +9,8 @@ __author__ = "730394749"
 def all(a: list[int], b: int) -> bool:
     """Figure out if all of a is the same as b."""
     length: int = len(a)
+    if length == 0:
+        return False
     i: int = 0
     while i < length:
         if a[i] != b:
@@ -22,6 +24,8 @@ def is_equal(a: list[int], b: list[int]) -> bool:
     """Figure out if two lists are equal."""
     length_one: int = len(a)
     length_two: int = len(b)
+    if length_one != length_two:
+        return False
     if length_one < length_two:
         return False
     else:
