@@ -6,6 +6,7 @@ __author__ = "730394749"
 
 
 def only_evens(xs: list[int]) -> list[int]:
+    """A function to give you only the evens from your list."""
     i: int = 0
     result: list[int] = []
     while i < len(xs):
@@ -16,6 +17,7 @@ def only_evens(xs: list[int]) -> list[int]:
 
 
 def sub(xs: list[int], y: int, z: int) -> list[int]:
+    """A function to give you your desired subset of a list."""
     result: list[int] = []
     if len(xs) == 0 or y > len(xs) or z <= 0:
         return result
@@ -30,6 +32,7 @@ def sub(xs: list[int], y: int, z: int) -> list[int]:
 
 
 def concat(xs: list[int], ys: list[int]) -> list[int]:
+    """A function to concatenate two lists."""
     i: int = 0
     j: int = 0
     result: list[int] = []
