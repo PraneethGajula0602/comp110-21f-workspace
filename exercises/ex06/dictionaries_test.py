@@ -2,7 +2,7 @@
 
 # TODO: Uncomment the below line when ready to write unit tests
 from exercises.ex06.dictionaries import invert, favorite_color, count
-
+import pytest
 __author__ = "730394749"
 
 
@@ -20,8 +20,9 @@ def test_invert_two() -> None:
 
 def test_invert_three() -> None:
     """Testing invert with a edge case."""
-    x: dict = {'Algebra': 'Math', 'Calculus': 'Math', 'Python': 'Comp'}
-    assert invert(x) == 'KeyError'
+    with pytest.raises(KeyError):
+        x: dict = {'kris': 'jordan', 'michael': 'jordan'}
+        invert(x)
 
 
 def test_favorite_color_one() -> None:

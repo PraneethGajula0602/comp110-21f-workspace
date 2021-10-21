@@ -46,6 +46,3 @@ def count(x: list[str]) -> dict[str, int]:
             result[x[i]] = 1
         i += 1
     return result
-
-
-print(count(["a", "b", "c", "b", "b", "a"]))
