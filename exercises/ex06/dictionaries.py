@@ -31,7 +31,11 @@ def favorite_color(x: dict[str, str]) -> str:
     for color in y:
         if greatest == y[color]:
             result = color
-        return result
+        if result != "":
+            return result
+
+
+print(favorite_color({"Marc": "yellow", "Ezri": "blue", "Kris": "blue", "Praneeth": "blue"}))
 
 
 def count(x: list[str]) -> dict[str, int]:
